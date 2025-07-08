@@ -144,7 +144,7 @@ export default function About() {
       {/* Hero Section */}
   {/* Hero Section with Slider */}
       
-    <section className="relative h-[500px] md:h-[650px] overflow-hidden bg-white">
+    <section className="relative h-[250px] md:h-[350px] overflow-hidden bg-white">
   {/* Slider Background */}
   <div className="absolute inset-0 z-0">
     <Swiper
@@ -435,21 +435,21 @@ export default function About() {
     <div className="overflow-x-auto scrollbar-hide">
       <div className="flex space-x-6 w-max px-2">
         {[
-          "client1.webp",
-          "client2.webp",
-          "client3.webp",
-          "client4.webp",
-          "client5.webp",
-          "client6.webp",
-          "client7.webp",
-          "client8.webp",
+          "client1.jpeg",
+          "client7.jpeg",
+          "client3.jpeg",
+          "client4.jpeg",
+          "client 5.jpeg",
+          "client 6.jpeg",
+          "client2.jpeg",
+          "client9.jpeg",
         ].map((logo, index) => (
           <div
             key={index}
             className="bg-white p-4 rounded shadow-md flex items-center justify-center w-44 h-24 flex-shrink-0"
           >
             <img
-              src={`/clients/${logo}`}
+              src={`/public/images/${logo}`}
               alt={`Client ${index + 1}`}
               className="max-h-full max-w-full object-contain"
             />

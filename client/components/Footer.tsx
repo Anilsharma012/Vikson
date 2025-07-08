@@ -1,11 +1,32 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Send,
+} from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
+          {/* Logo & Tagline */}
+          <div className="md:col-span-1">
+            <h2 className="text-2xl font-bold text-orange-400 mb-2">
+              Vikson Medisys
+            </h2>
+            <p className="text-sm text-gray-400">
+              Pharmaceutical Excellence Since 2000
+            </p>
+            <p className="mt-2 text-gray-500 text-xs">
+              Trusted name in healthcare, delivering quality across India.
+            </p>
+          </div>
+
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Company</h3>
@@ -28,10 +49,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/partners"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
-                  Careers
+                  Partners
                 </a>
               </li>
             </ul>
@@ -43,7 +64,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/our-products/injections"
+                  to="/our-products/injection"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Injections
@@ -59,15 +80,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/our-products/capsules"
+                  to="/our-products/Protein Powder"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
-                  Capsules
+                  Protein Powder
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/our-products/syrups"
+                  to="/our-products/TABLET"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Syrups
@@ -76,16 +97,16 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Help */}
+          {/* Quick Links / Help */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Help</h3>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
-                  FAQ
+                  FAQs
                 </a>
               </li>
               <li>
@@ -98,10 +119,12 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.google.com/maps?q=vikson+international+medisys"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
-                  Support
+                  Find us on Map
                 </a>
               </li>
             </ul>
@@ -121,7 +144,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5 text-orange-400" />
-                <span className="text-gray-400">Haryana, India</span>
+                <span className="text-gray-400">Rohtak, Haryana, India</span>
               </div>
 
               {/* Social Icons */}
@@ -149,8 +172,23 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+        {/* Newsletter / Bottom */}
+        <div className="mt-10 border-t border-gray-700 pt-6 text-center">
+          {/* <form className="max-w-md mx-auto flex items-center justify-center gap-2 mb-4">
+            <input
+              type="email"
+              placeholder="Subscribe to our newsletter"
+              className="px-4 py-2 rounded w-full text-black"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded"
+            >
+              <Send className="w-4 h-4" />
+            </button>
+          </form> */}
+          <p className="text-gray-500 text-sm">
             © 2025 Vikson International Medisys. All Rights Reserved.
           </p>
         </div>

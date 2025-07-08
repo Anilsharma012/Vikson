@@ -22,7 +22,7 @@ export default function Index() {
       <WhatsAppButton />
 
 
-<section className="relative h-[500px] md:h-[650px]">
+<section className="relative h-[250px] md:h-[330px]">
   {/* Swiper Slider with Blur and Dark Overlay */}
   <div className="absolute inset-0 z-0 overflow-hidden">
     <Swiper
@@ -338,20 +338,20 @@ export default function Index() {
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-6xl mx-auto">
       {selectedCategory === "Pharmaceuticals" &&
         [
-          { name: "Anti Infection Segment ", image: "/products/products/capsule.jpg", pdf: "/products/pdfs/capsule.pdf" },
-          { name: "Cardiology Segment ", image: "/products/products/churna.jpg", pdf: "/pdfs/capsule.pdf" },
-          { name: "Dermetology Segment ", image: "/products/products/cream.jpg", pdf: "/pdfs/syrup.pdf" },
-          { name: "Disbetology Segment", image: "/products/products/ayur-syrup.jpg", pdf: "/pdfs/sachet.pdf" },
-          { name: "Gastroenterology Segment", image: "/products/products/protein.jpg", pdf: "/pdfs/injection.pdf" },
+          { name: "Anti Infection Segment ", image: "/products/products/OIP.jpeg", pdf: "/products/pdfs/lupin.pdf" },
+          { name: "Cardiology Segment ", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/capsule.pdf" },
+          { name: "Dermetology Segment ", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/syrup.pdf" },
+          { name: "Disbetology Segment", image: "/products/products/OIP3.jpeg", pdf: "/pdfs/sachet.pdf" },
+          { name: "Gastroenterology Segment", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/injection.pdf" },
 
 
-          { name: "Gynaceology Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
-          { name: "Neuro/Pshychistry  Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
-          { name: "Ortho Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
-          { name: "Pain Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
-          { name: "Pulmonology Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
-          { name: "Urology Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
-          { name: "Oncology Segment", image: "/products/products/injection.jpg", pdf: "/pdfs/injection.pdf" },
+          { name: "Gynaceology Segment", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/injection.pdf" },
+          { name: "Neuro/Pshychistry  Segment", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/injection.pdf" },
+          { name: "Ortho Segment", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/injection.pdf" },
+          { name: "Pain Segment", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/injection.pdf" },
+          { name: "Pulmonology Segment", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/injection.pdf" },
+          { name: "Urology Segment", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/injection.pdf" },
+          { name: "Oncology Segment", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/injection.pdf" },
       
 
 
@@ -374,17 +374,17 @@ export default function Index() {
 
       {selectedCategory === "Nutraceuticals" &&
         [
-          { name: "TABLETS", image: "/products/products/capsule.jpg", pdf: "/pdfs/effervescent.pdf" },
-          { name: "CAPSULE", image: "/products/products/capsule.jpg", pdf: "/pdfs/protein.pdf" },
-          { name: "SYRUPS", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
+          { name: "TABLETS", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/effervescent.pdf" },
+          { name: "CAPSULE", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/protein.pdf" },
+          { name: "SYRUPS", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
 
-         { name: "SACNETS", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-                  { name: "Injection", image:"/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-                           { name: "Liquids", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-                                    { name: "Lotion/Cream", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-         { name: "Softgel", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
+         { name: "SACNETS", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
+                  { name: "Injection", image:"/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
+                           { name: "Liquids", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/spray.pdf" },
+                                    { name: "Lotion/Cream", image: "/products/products/OIP.jpeg", pdf: "/pdfs/spray.pdf" },
+         { name: "Softgel", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/spray.pdf" },
 
-                  { name: "Protein Powder", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
+                  { name: "Protein Powder", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
 
                                     
 
@@ -410,17 +410,17 @@ export default function Index() {
 
       {selectedCategory === "Ayurvedic/Herbal" &&
         [
-          { name: "TABLETS", image:"/products/products/capsule.jpg", pdf: "/pdfs/effervescent.pdf" },
-          { name: "CAPSULE", image: "/products/products/capsule.jpg", pdf: "/pdfs/protein.pdf" },
-          { name: "SYRUPS", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
+          { name: "TABLETS", image:"/products/products/OIP10.jpeg", pdf: "/pdfs/effervescent.pdf" },
+          { name: "CAPSULE", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/protein.pdf" },
+          { name: "SYRUPS", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
 
-         { name: "SACNETS", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-                  { name: "Injection", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-                           { name: "Liquids", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-                                    { name: "Lotion/Cream", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
-         { name: "Softgel", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
+         { name: "SACNETS", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
+                  { name: "Injection", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
+                           { name: "Liquids", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
+                                    { name: "Lotion/Cream", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/spray.pdf" },
+         { name: "Softgel", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
 
-                  { name: "Protein Powder", image: "/products/products/capsule.jpg", pdf: "/pdfs/spray.pdf" },
+                  { name: "Protein Powder", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
         ].map((item) => (
           <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
             <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
@@ -438,14 +438,14 @@ export default function Index() {
 
       {selectedCategory === "Cosmetic" &&
         [
-          { name: "Face Cream", image: "/products/products/capsule.jpg", pdf: "/pdfs/cream.pdf" },
-          { name: "Serum", image: "/products/products/capsule.jpg", pdf: "/pdfs/shampoo.pdf" },
-          { name: "Shampoo", image: "/products/products/capsule.jpg", pdf: "/pdfs/moisturiser.pdf" },
-          { name: "Body wash", image: "/products/products/capsule.jpg", pdf: "/pdfs/moisturiser.pdf" },
-          { name: "Lotion", image: "/products/products/capsule.jpg", pdf: "/pdfs/moisturiser.pdf" },
+          { name: "Face Cream", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/cream.pdf" },
+          { name: "Serum", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/shampoo.pdf" },
+          { name: "Shampoo", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+          { name: "Body wash", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+          { name: "Lotion", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/moisturiser.pdf" },
 
-                    { name: "Spray", image: "/products/products/capsule.jpg", pdf: "/pdfs/moisturiser.pdf" },
-          { name: "Oil", image: "/products/products/capsule.jpg", pdf: "/pdfs/moisturiser.pdf" },
+                    { name: "Spray", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+          { name: "Oil", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/moisturiser.pdf" },
 
 
 

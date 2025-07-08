@@ -199,20 +199,26 @@ export default function Contact() {
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-xl">Find Us</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                      <div className="text-center">
-                        <MapPin className="w-12 h-12 mx-auto text-gray-400 mb-2" />
-                        <p className="text-gray-600">Google Maps will be embedded here</p>
-                        <p className="text-sm text-gray-500">Plot No. 123, Rohtak, Haryana</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+               <Card>
+  <CardHeader>
+    <CardTitle className="text-xl">Find Us</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="w-full h-64 rounded-lg overflow-hidden border">
+      <iframe
+        title="Vikson Location"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3482.8211592625926!2d76.5663305!3d28.8955736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d8517cb1dc2d7%3A0x74f5ad768fba79ae!2sRohtak%2C%20Haryana!5e0!3m2!1sen!2sin!4v1688737789789!5m2!1sen!2sin"
+      ></iframe>
+    </div>
+  </CardContent>
+</Card>
+
               </div>
             </div>
           </div>

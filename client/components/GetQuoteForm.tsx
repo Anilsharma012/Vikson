@@ -22,13 +22,10 @@ export const GetQuoteForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const productCategories = [
-    "Injections",
-    "Tablets",
-    "Capsules",
-    "Syrups",
-    "Softgels",
-    "Eye Drops",
-    "Other",
+   "Protein Powder",
+"TABLET",
+"tablets",
+"Injection"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -39,7 +36,11 @@ export const GetQuoteForm = () => {
       const res = await fetch("http://localhost:4000/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+  ...formData,
+  product: formData.productCategory, // ✅ Correct key
+}),
+
       });
 
       const result = await res.json();
@@ -142,4 +143,4 @@ export const GetQuoteForm = () => {
       </Button>
     </form>
   );
-};
+};  
