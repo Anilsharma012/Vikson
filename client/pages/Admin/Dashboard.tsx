@@ -31,15 +31,26 @@ const Dashboard = () => {
         </button>
       </div>
 
+
+
+
+
+
+
       {/* Stats */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
           <div key={index} className="bg-white rounded-xl shadow p-4">
             <div className="text-sm text-gray-500">{stat.label}</div>
             <div className="text-2xl font-semibold text-blue-700">{stat.value}</div>
           </div>
         ))}
-      </div> */}
+      </div> 
+
+
+
+
+
 
       {/* Overview */}
       <div className="mt-10 bg-white p-6 rounded-xl shadow">

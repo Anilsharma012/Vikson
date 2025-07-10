@@ -74,12 +74,12 @@ const OurProducts = () => {
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
                 <p className="text-sm text-gray-600">
-                  {item.description || "High-quality pharmaceutical product"}
+                  {/* {item.description || "High-quality pharmaceutical product"} */}
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
-                  Category: {item.category || "General"}
+                  {/* Category: {item.category || "General"} */}
                 </p>
-                <p className="text-xs text-gray-500">Price: ₹{item.price}</p>
+                {/* <p className="text-xs text-gray-500">Price: ₹{item.price}</p> */}
                 <button
   onClick={() => window.location.href = `/product/${item._id}`}
   className="mt-3 px-4 py-2 text-white bg-orange-500 rounded hover:bg-orange-600"

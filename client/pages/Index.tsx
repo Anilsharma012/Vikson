@@ -14,8 +14,80 @@ import { Autoplay } from "swiper/modules";
 
 
 
+
+
+
+const pharma = [
+  { name: "Anti Infection Segment", image: "/products/products/OIP.jpeg", pdf: "/products/pdfs/lupin.pdf" },
+  { name: "Cardiology Segment", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/capsule.pdf" },
+  { name: "Dermetology Segment", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/syrup.pdf" },
+  { name: "Disbetology Segment", image: "/products/products/OIP3.jpeg", pdf: "/pdfs/sachet.pdf" },
+  { name: "Gastroenterology Segment", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Gynaceology Segment", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Neuro/Pshychistry Segment", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Ortho Segment", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Pain Segment", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Pulmonology Segment", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Urology Segment", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/injection.pdf" },
+  { name: "Oncology Segment", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/injection.pdf" },
+];
+
+const nutra = [
+  { name: "TABLETS", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/effervescent.pdf" },
+  { name: "CAPSULE", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/protein.pdf" },
+  { name: "SYRUPS", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "SACNETS", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Injection", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Liquids", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Lotion/Cream", image: "/products/products/OIP.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Softgel", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Protein Powder", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
+];
+
+const ayur = [
+  { name: "TABLETS", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/effervescent.pdf" },
+  { name: "CAPSULE", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/protein.pdf" },
+  { name: "SYRUPS", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "SACNETS", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Injection", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Liquids", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Lotion/Cream", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Softgel", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
+  { name: "Protein Powder", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
+];
+
+const cosmetic = [
+  { name: "Face Cream", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/cream.pdf" },
+  { name: "Serum", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/shampoo.pdf" },
+  { name: "Shampoo", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+  { name: "Body wash", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+  { name: "Lotion", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+  { name: "Spray", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+  { name: "Oil", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+];
+
+const categories = {
+  Pharmaceuticals: pharma,
+  Nutraceuticals: nutra,
+  "Ayurvedic/Herbal": ayur,
+  Cosmetic: cosmetic,
+};
+
+
+
+
+
+
+
+
+
+
+
+
 export default function Index() {
   const [selectedCategory, setSelectedCategory] = useState("Pharmaceuticals");
+
+    const [showAll, setShowAll] = useState(false);
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -311,166 +383,182 @@ export default function Index() {
 
 
 
-<section className="py-20 bg-white">
+{/* <section className="py-20 bg-white">
   <div className="container mx-auto px-4 text-center">
     <h2 className="text-4xl font-bold text-blue-800 mb-6">
       Explore Products by Category
     </h2>
 
-    {/* Category Buttons */}
-    <div className="flex flex-wrap justify-center gap-4 mb-10">
-      {["Pharmaceuticals", "Nutraceuticals", "Ayurvedic/Herbal", "Cosmetic"].map((cat) => (
-        <button
-          key={cat}
-          className={`px-6 py-3 rounded-full font-medium text-white ${
-            selectedCategory === cat
-              ? "bg-blue-800"
-              : "bg-gray-400 hover:bg-gray-500"
-          }`}
-          onClick={() => setSelectedCategory(cat)}
-        >
-          {cat}
-        </button>
-      ))}
-    </div>
 
-    {/* Category-wise Product Cards */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-6xl mx-auto">
-      {selectedCategory === "Pharmaceuticals" &&
-        [
-          { name: "Anti Infection Segment ", image: "/products/products/OIP.jpeg", pdf: "/products/pdfs/lupin.pdf" },
-          { name: "Cardiology Segment ", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/capsule.pdf" },
-          { name: "Dermetology Segment ", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/syrup.pdf" },
-          { name: "Disbetology Segment", image: "/products/products/OIP3.jpeg", pdf: "/pdfs/sachet.pdf" },
-          { name: "Gastroenterology Segment", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/injection.pdf" },
+   
+  const pharma = [
+    { name: "Anti Infection Segment", image: "/products/products/OIP.jpeg", pdf: "/products/pdfs/lupin.pdf" },
+    { name: "Cardiology Segment", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/capsule.pdf" },
+    { name: "Dermetology Segment", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/syrup.pdf" },
+    { name: "Disbetology Segment", image: "/products/products/OIP3.jpeg", pdf: "/pdfs/sachet.pdf" },
+    { name: "Gastroenterology Segment", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Gynaceology Segment", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Neuro/Pshychistry Segment", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Ortho Segment", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Pain Segment", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Pulmonology Segment", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Urology Segment", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/injection.pdf" },
+    { name: "Oncology Segment", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/injection.pdf" },
+  ];
 
+  const nutra = [
+    { name: "TABLETS", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/effervescent.pdf" },
+    { name: "CAPSULE", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/protein.pdf" },
+    { name: "SYRUPS", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "SACNETS", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Injection", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Liquids", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Lotion/Cream", image: "/products/products/OIP.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Softgel", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Protein Powder", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
+  ];
 
-          { name: "Gynaceology Segment", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/injection.pdf" },
-          { name: "Neuro/Pshychistry  Segment", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/injection.pdf" },
-          { name: "Ortho Segment", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/injection.pdf" },
-          { name: "Pain Segment", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/injection.pdf" },
-          { name: "Pulmonology Segment", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/injection.pdf" },
-          { name: "Urology Segment", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/injection.pdf" },
-          { name: "Oncology Segment", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/injection.pdf" },
+  const ayur = [
+    { name: "TABLETS", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/effervescent.pdf" },
+    { name: "CAPSULE", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/protein.pdf" },
+    { name: "SYRUPS", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "SACNETS", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Injection", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Liquids", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Lotion/Cream", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Softgel", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
+    { name: "Protein Powder", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
+  ];
+
+  const cosmetic = [
+    { name: "Face Cream", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/cream.pdf" },
+    { name: "Serum", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/shampoo.pdf" },
+    { name: "Shampoo", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+    { name: "Body wash", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+    { name: "Lotion", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+    { name: "Spray", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+    { name: "Oil", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/moisturiser.pdf" },
+  ];
+
+  const categories = {
+    Pharmaceuticals: pharma,
+    Nutraceuticals: nutra,
+    "Ayurvedic/Herbal": ayur,
+    Cosmetic: cosmetic,
+  };
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-4xl font-bold text-blue-800 mb-6">Explore Products by Category</h2>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {Object.keys(categories).map((cat) => (
+            <button
+              key={cat}
+              className={`px-6 py-3 rounded-full font-medium text-white ${
+                selectedCategory === cat ? "bg-blue-800" : "bg-gray-400 hover:bg-gray-500"
+              }`}
+              onClick={() => {
+                setSelectedCategory(cat);
+                setShowAll(false); // reset when category changes
+              }}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+       
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-6xl mx-auto">
+          {categories[selectedCategory]
+            .slice(0, showAll ? undefined : 6)
+            .map((item) => (
+              <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
+                <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
+                <img src={item.image} alt={item.name} className="w-full h-40 object-cover mb-3 rounded" />
+                <a
+                  href={item.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+                >
+                  View PDF
+                </a>
+              </div>
+            ))}
+        </div>
+
       
-
-
-
-
-        ].map((item) => (
-          <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
-            <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
-            <img src={item.image} alt={item.name} className="w-full h-40 object-cover mb-3 rounded" />
-            <a
-              href={item.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+        {categories[selectedCategory].length > 6 && (
+          <div className="mt-6">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="text-blue-800 font-semibold underline"
             >
-              View PDF
-            </a>
+              {showAll ? "Hide" : "View All"}
+            </button>
           </div>
-        ))}
-
-      {selectedCategory === "Nutraceuticals" &&
-        [
-          { name: "TABLETS", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/effervescent.pdf" },
-          { name: "CAPSULE", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/protein.pdf" },
-          { name: "SYRUPS", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
-
-         { name: "SACNETS", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
-                  { name: "Injection", image:"/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
-                           { name: "Liquids", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/spray.pdf" },
-                                    { name: "Lotion/Cream", image: "/products/products/OIP.jpeg", pdf: "/pdfs/spray.pdf" },
-         { name: "Softgel", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/spray.pdf" },
-
-                  { name: "Protein Powder", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
-
-                                    
-
-
-
-
-
-
-        ].map((item) => (
-          <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
-            <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
-            <img src={item.image} alt={item.name} className="w-full h-40 object-cover mb-3 rounded" />
-            <a
-              href={item.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
-            >
-              View PDF
-            </a>
-          </div>
-        ))}
-
-      {selectedCategory === "Ayurvedic/Herbal" &&
-        [
-          { name: "TABLETS", image:"/products/products/OIP10.jpeg", pdf: "/pdfs/effervescent.pdf" },
-          { name: "CAPSULE", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/protein.pdf" },
-          { name: "SYRUPS", image: "/products/products/OIP6.jpeg", pdf: "/pdfs/spray.pdf" },
-
-         { name: "SACNETS", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
-                  { name: "Injection", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/spray.pdf" },
-                           { name: "Liquids", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/spray.pdf" },
-                                    { name: "Lotion/Cream", image: "/products/products/OIP4.jpeg", pdf: "/pdfs/spray.pdf" },
-         { name: "Softgel", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/spray.pdf" },
-
-                  { name: "Protein Powder", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/spray.pdf" },
-        ].map((item) => (
-          <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
-            <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
-            <img src={item.image} alt={item.name} className="w-full h-40 object-cover mb-3 rounded" />
-            <a
-              href={item.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
-            >
-              View PDF
-            </a>
-          </div>
-        ))}
-
-      {selectedCategory === "Cosmetic" &&
-        [
-          { name: "Face Cream", image: "/products/products/OIP5.jpeg", pdf: "/pdfs/cream.pdf" },
-          { name: "Serum", image: "/products/products/OIP7.jpeg", pdf: "/pdfs/shampoo.pdf" },
-          { name: "Shampoo", image: "/products/products/OIP1.jpeg", pdf: "/pdfs/moisturiser.pdf" },
-          { name: "Body wash", image: "/products/products/OIP2.jpeg", pdf: "/pdfs/moisturiser.pdf" },
-          { name: "Lotion", image: "/products/products/OIP9.jpeg", pdf: "/pdfs/moisturiser.pdf" },
-
-                    { name: "Spray", image: "/products/products/OIP10.jpeg", pdf: "/pdfs/moisturiser.pdf" },
-          { name: "Oil", image: "/products/products/OIP8.jpeg", pdf: "/pdfs/moisturiser.pdf" },
-
-
-
-
-
-        ].map((item) => (
-          <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
-            <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
-            <img src={item.image} alt={item.name} className="w-full h-40 object-cover mb-3 rounded" />
-            <a
-              href={item.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
-            >
-              View PDF
-            </a>
-          </div>
-        ))}
-    </div>
+        )}
+      </div>
+    </section>
+ 
   </div>
-</section>
+</section> */}
 
 
+   <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-blue-800 mb-6">Explore Products by Category</h2>
 
+          <div className="flex flex-wrap justify-center gap-4 mb-10">
+            {Object.keys(categories).map((cat) => (
+              <button
+                key={cat}
+                className={`px-6 py-3 rounded-full font-medium text-white ${
+                  selectedCategory === cat ? "bg-blue-800" : "bg-gray-400 hover:bg-gray-500"
+                }`}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setShowAll(false);
+                }}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left max-w-6xl mx-auto">
+            {categories[selectedCategory]
+              .slice(0, showAll ? undefined : 6)
+              .map((item) => (
+                <div key={item.name} className="border rounded-lg p-4 shadow hover:shadow-md transition">
+                  <h3 className="text-lg font-semibold text-blue-700 mb-2">{item.name}</h3>
+                  <img src={item.image} alt={item.name} className="w-full h-40 object-cover mb-3 rounded" />
+                  <a
+                    href={item.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+                  >
+                    View PDF
+                  </a>
+                </div>
+              ))}
+          </div>
+
+          {categories[selectedCategory].length > 6 && (
+            <div className="mt-6">
+              <button
+  onClick={() => setShowAll(!showAll)}
+  className="mt-6 inline-block px-6 py-2 text-sm font-medium text-blue-800 border border-blue-800 rounded-full hover:bg-blue-800 hover:text-white transition duration-200 shadow-sm"
+>
+  {showAll ? "Hide Products" : "View All Products"}
+</button>
+            </div>
+          )}
+        </div>
+      </section>
 
 
 

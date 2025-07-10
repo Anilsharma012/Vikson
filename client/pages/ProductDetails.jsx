@@ -43,15 +43,15 @@ const ProductDetails = () => {
             <h1 className="text-3xl font-bold text-blue-900 mb-2">
               {product?.name || "No Name"}
             </h1>
-            <p className="text-gray-600 mb-4">
-              {product?.description || "No description available."}
-            </p>
-            <p className="text-gray-700 font-medium">
-              Price: ₹{product?.price || "N/A"}
-            </p>
-            <p className="text-sm text-gray-500 mt-2">
-              Category: {product?.category || "N/A"}
-            </p>
+            <p className="text-gray-600 mb-4 break-words whitespace-pre-wrap">
+  {product?.description || "No description available."}
+</p>
+            <p className="text-gray-800 text-lg">
+  <span className="font-bold">Price:</span> ₹{product?.price || "N/A"}
+</p>
+<p className="text-gray-700 text-sm mt-1">
+  <span className="font-bold">Category:</span> {product?.category || "N/A"}
+</p>
             {/* <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
               Enquire Now
             </button> */}
