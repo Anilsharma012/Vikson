@@ -31,21 +31,21 @@ const Header = () => {
     <header className="bg-slate-900 text-white sticky top-0 z-40 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-           <Link to="/" className="flex items-center space-x-4">
+          {/* Logo and Text side by side always */}
+         <Link to="/" className="flex items-center gap-3 overflow-hidden">
   <img
-    src="/ViksonLogo.jpeg"
+    src="/flogo.png"
     alt="Vikson Logo"
-    className="w-20 h-20 object-contain"
+    className="w-12 h-12 sm:w-20 sm:h-20 object-contain bg-transparent flex-shrink-0"
   />
-<div className="leading-tight">
-  <h2 className="text-xl font-bold text-white">
-    Vikson International Medisys
-  </h2>
-  <p className="text-sm text-blue-300">
-    The Third Party Manufacturing Specialist
-  </p>
-</div>
-
+  <div className="leading-tight whitespace-nowrap overflow-hidden text-ellipsis max-w-[180px] sm:max-w-none">
+    <h2 className="text-[13px] sm:text-xl font-bold text-white">
+      Vikson International Medisys
+    </h2>
+    <p className="text-[11px] sm:text-sm text-blue-300 leading-tight">
+      The Third Party Manufacturing Specialist
+    </p>
+  </div>
 </Link>
 
           {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Get Quote Button */}
+          {/* Get Quote Button (Desktop) */}
           <div className="hidden lg:flex">
             <Dialog>
               <DialogTrigger asChild>
@@ -100,7 +100,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Content */}
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-700">
             <nav className="flex flex-col space-y-4">

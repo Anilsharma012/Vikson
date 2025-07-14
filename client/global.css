@@ -108,3 +108,46 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+
+
+
+
+
+@keyframes scrollLeftInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-infinite {
+  animation: scrollLeftInfinite 60s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.category-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+.category-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.category-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}

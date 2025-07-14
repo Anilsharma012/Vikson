@@ -6,18 +6,20 @@ import {
   Facebook,
   Twitter,
   Linkedin,
+  Instagram,
+  Youtube,
   Send,
 } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white py-12">
+    <footer className="bg-slate-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-5 gap-8">
           {/* Logo & Tagline */}
           <div className="md:col-span-1">
             <h2 className="text-2xl font-bold text-orange-400 mb-2">
-              Vikson Medisys
+              Vikson International Medisys
             </h2>
             <p className="text-sm text-gray-400">
               Pharmaceutical Excellence Since 2000
@@ -58,46 +60,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Products */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Products</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/our-products/injection"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  Injections
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/our-products/tablets"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  Tablets
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/our-products/Protein Powder"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  Protein Powder
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/our-products/TABLET"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  Syrups
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Links / Help */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -111,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#quality"
                   className="text-gray-400 hover:text-orange-400 transition-colors"
                 >
                   Quality Assurance
@@ -140,54 +103,40 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-orange-400" />
-                <span className="text-gray-400">info@viksonmedisys.com</span>
+                <span className="text-gray-400">info@viksointernationalnmedisys.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5 text-orange-400" />
                 <span className="text-gray-400">Rohtak, Haryana, India</span>
               </div>
+            </div>
+          </div>
 
-              {/* Social Icons */}
-              <div className="flex space-x-4 mt-4">
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-orange-400 transition-colors"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
+          {/* Social Media */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-orange-400 transition-colors">
+                <Youtube className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Newsletter / Bottom */}
+        {/* Bottom Text */}
         <div className="mt-10 border-t border-gray-700 pt-6 text-center">
-          {/* <form className="max-w-md mx-auto flex items-center justify-center gap-2 mb-4">
-            <input
-              type="email"
-              placeholder="Subscribe to our newsletter"
-              className="px-4 py-2 rounded w-full text-black"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded"
-            >
-              <Send className="w-4 h-4" />
-            </button>
-          </form> */}
           <p className="text-gray-500 text-sm">
             © 2025 Vikson International Medisys. All Rights Reserved.
           </p>

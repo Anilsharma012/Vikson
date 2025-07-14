@@ -31,35 +31,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-
 export default function About() {
   const companyValues = [
     {
-      icon: Shield,
-      title: "Quality First",
+      title: "Anti Cancer Oncology",
       description:
-        "We never compromise on quality. Every product undergoes rigorous testing and quality checks to ensure the highest standards.",
+        "We offer highly specialized oncology products that undergo strict testing to meet global safety and efficacy standards.",
       color: "text-blue-600",
     },
     {
-      icon: Heart,
-      title: "Patient Care",
+      title: "Pharmaceuticals",
       description:
-        "At the heart of everything we do is our commitment to improving patient health and well-being through safe, effective medicines.",
+        "We manufacture a wide range of quality medicines for chronic and acute conditions using modern equipment and strict protocols.",
       color: "text-red-500",
     },
     {
-      icon: Lightbulb,
-      title: "Innovation",
+      title: "Nutraceuticals",
       description:
-        "We continuously invest in research and development to bring innovative pharmaceutical solutions to the market.",
+        "Our nutraceutical line is developed with cutting-edge R&D to enhance health and immunity through natural, scientifically-backed formulations.",
       color: "text-yellow-500",
     },
     {
-      icon: Users,
       title: "Team Excellence",
       description:
-        "Our success is built on the expertise, dedication, and passion of our talented team of professionals.",
+        "Our experienced team of professionals ensures consistent innovation, quality assurance, and customer satisfaction in every step.",
       color: "text-green-600",
     },
   ];
@@ -141,11 +136,10 @@ export default function About() {
       <Header />
       <WhatsAppButton />
 
-      {/* Hero Section */}
-  {/* Hero Section with Slider */}
-      
-    <section className="relative h-[250px] md:h-[350px] overflow-hidden bg-white">
-  {/* Slider Background */}
+  
+      {/* Hero Section with Slider */}
+<section className="relative -mt-[20px] h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-white ">
+  {/* Background Image Slider */}
   <div className="absolute inset-0 z-0">
     <Swiper
       modules={[Autoplay]}
@@ -155,76 +149,102 @@ export default function About() {
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       className="w-full h-full"
     >
-      {["download.webp", "slider6.webp", "slider7.webp", "slider4.webp"].map((img, index) => (
-        <SwiperSlide key={index}>
-          <img
-            src={`/slider/${img}`}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover filter blur-sm scale-105"
-          />
-        </SwiperSlide>
-      ))}
+      {["design1.png", "productmonitaring.webp", "about.jpg", "about1.jpg"].map(
+        (img, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="w-full h-full bg-no-repeat bg-center"
+              style={{
+                backgroundImage: `url('/slider/${img}')`,
+                backgroundSize: "contain",
+              }}
+            ></div>
+          </SwiperSlide>
+        )
+      )}
     </Swiper>
-    <div className="absolute inset-0 bg-white bg-opacity-30"></div>
-  </div>
-
-  {/* Foreground Text with black color */}
-  <div className="relative z-10 flex flex-col items-center justify-center text-black text-center h-full px-4">
-    <h1 className="text-5xl md:text-6xl font-bold mb-8 drop-shadow-none">
-      About Vikson International Medisys
-    </h1>
-    <p className="text-xl md:text-2xl mb-8 text-gray-800">
-      Pioneering pharmaceutical excellence for over two decades
-    </p>
-    <div className="flex flex-wrap justify-center gap-8 text-center">
-      <div>
-        <div className="text-3xl font-bold">20+</div>
-        <p className="text-gray-700">Years of Excellence</p>
-      </div>
-      <div>
-        <div className="text-3xl font-bold">1000+</div>
-        <p className="text-gray-700">Products Manufactured</p>
-      </div>
-      <div>
-        <div className="text-3xl font-bold">50+</div>
-        <p className="text-gray-700">Partner Companies</p>
-      </div>
-      <div>
-        <div className="text-3xl font-bold">3</div>
-        <p className="text-gray-700">Manufacturing Units</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-{/* Specialisation Section */}
-<section className="py-20 bg-white">
-  <div className="container mx-auto px-4">
-    <div className="max-w-4xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Specialisation</h2>
-      <div className="space-y-6 text-lg text-gray-700 text-left">
-        <div className="flex items-start space-x-3">
-          <span className="text-blue-600 mt-1">✔</span>
-          <p>
-            We work as a contract agreement for a year of supply for the complete formulation of any distributor agency, hospital, or trust.
-          </p>
-        </div>
-        <div className="flex items-start space-x-3">
-          <span className="text-blue-600 mt-1">✔</span>
-          <p>
-            We work for Government Hospital Tenders (ESI / Private).
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 
 
 
+      {/* Specialisation Section */}
+      {/* Specialisation Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-800 mb-8">
+              Our Specialisation
+            </h2>
+
+            {/* ✔ Bullet Points */}
+            <div className="space-y-6 text-lg text-gray-700 text-left">
+              <div className="flex items-start space-x-3">
+                <span className="text-blue-600 mt-1">✔</span>
+                <p>
+                  We work as a contract agreement for a year of supply for the
+                  complete formulation of any distributor agency, hospital, or
+                  trust.
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-blue-600 mt-1">✔</span>
+                <p>We work for Government Hospital Tenders (ESI / Private).</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Specialisation Cards */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {companyValues.map((value, index) => (
+                <Card
+                  key={index}
+                  className="text-center p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white rounded-xl"
+                >
+                  <CardHeader className="mb-2">
+                    <CardTitle className="text-xl font-semibold text-gray-800">
+                      {value.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {value.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Strengths Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
+            {/* Our Strengths */}
+          </h2>
+          <div className="w-full max-w-6xl mx-auto rounded-lg overflow-hidden">
+            <img
+              src="/images/img.png" // 🟡 Replace this path with correct one if needed
+              alt="Our Strengths"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+
+ {/* Banner Image above Explore Our Company */}
+      {/* <section>
+        <img
+          src="slider/design1.png"
+          alt="Vikson Pharma Banner"
+          className="w-full h-auto object-cover"
+        />
+      </section> */}
 
 
 
@@ -270,7 +290,7 @@ export default function About() {
               </div>
               <div className="relative">
                 <img
-                  src="/images/injection.jpg"
+                  src="/images/ourstory.jpg"
                   alt="Our Manufacturing Excellence"
                   className="rounded-lg shadow-xl"
                 />
@@ -289,7 +309,7 @@ export default function About() {
       </section>
 
       {/* Company Values */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -319,10 +339,10 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Company Timeline */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -371,7 +391,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Leadership Team */}
       {/* <section className="py-20 bg-gray-50">
@@ -421,17 +441,15 @@ export default function About() {
         </div>
       </section> */}
 
-
-
-{/* Our Clients Section */}
-<section className="py-20 bg-gray-50">
+      {/* Our Clients Section */}
+      {/* <section className="py-20 bg-gray-50">
   <div className="container mx-auto px-4">
     <div className="text-center mb-12">
       <h2 className="text-4xl font-bold text-gray-800 mb-2">Our Clients</h2>
       <div className="mx-auto w-24 border-b-2 border-orange-500 mt-2"></div>
     </div>
 
-    {/* Scrollable Row of Clients */}
+  
     <div className="overflow-x-auto scrollbar-hide">
       <div className="flex space-x-6 w-max px-2">
         {[
@@ -458,14 +476,7 @@ export default function About() {
       </div>
     </div>
   </div>
-</section>
-
-
-
-
-
-
-
+</section> */}
 
       {/* Why Choose Us */}
       <section className="py-20">
@@ -484,7 +495,7 @@ export default function About() {
                         Proven Track Record
                       </h3>
                       <p className="text-gray-600">
-                        Over 20 years of consistent quality and reliability in
+                        Over 10 years of consistent quality and reliability in
                         pharmaceutical manufacturing.
                       </p>
                     </div>
@@ -536,7 +547,7 @@ export default function About() {
                 <div className="absolute top-6 left-6 bg-white p-4 rounded-lg shadow-lg">
                   <div className="flex items-center space-x-2">
                     <Award className="w-6 h-6 text-yellow-500" />
-                    <span className="font-semibold">GMP Certified</span>
+                    <span className="font-semibold"> WHO GMP Certified</span>
                   </div>
                 </div>
               </div>
@@ -545,49 +556,105 @@ export default function About() {
         </div>
       </section>
 
+
+
+
+
+
+
+{/* Business Growth Section (Image Reference) */}
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-6xl ">
+        {/* <span className="inline-block w-4 h-4 rounded-full bg-black mr-2 align-middle"></span> */}
+        Dedicated team targeted <br /> towards business growth
+      </h2>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      <div className="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="/images/tech-expertise.webp"
+          alt="Lab Team"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="/images/businessanalyst.webp"
+          alt="Business Analytics"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="rounded-lg overflow-hidden shadow-md">
+        <img
+          src="/images/market.webp"
+          alt="Foregen Team Bag"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* Contact CTA */}
-      <section
-        className="py-20 text-white relative"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Partner with Us?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Join our network of satisfied clients and experience the Vikson
-              difference
-            </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link to="/contact-us">
-                <Button
-                  size="lg"
-                  className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get in Touch
-                </Button>
-              </Link>
-              <Link to="/our-products">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="text-white border-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg"
-                >
-                  Explore Products
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     <section
+  className="py-20 text-white relative"
+  style={{
+    backgroundImage:
+      "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+  }}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-300 opacity-60 z-0"></div>
+
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="max-w-4xl mx-auto text-center">
+      <h2 className="text-4xl font-bold mb-6">Ready to Partner with Us?</h2>
+      <p className="text-xl mb-8 text-blue-100">
+        Join our network of satisfied clients and experience the Vikson
+        difference
+      </p>
+      <div className="flex flex-wrap justify-center gap-6">
+        <Link to="/contact-us">
+          <Button
+            size="lg"
+            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg"
+          >
+            <Phone className="w-5 h-5 mr-2" />
+            Get in Touch
+          </Button>
+        </Link>
+        <Link to="/our-products">
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-white border-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg"
+          >
+            Explore Products
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <Footer />
     </div>

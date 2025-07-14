@@ -24,7 +24,7 @@ export default function Manufacturing() {
   const qualityFeatures = [
     {
       icon: ShieldCheck,
-      title: "GMP Certified",
+      title: " WHO GMP Certified",
       description: "Good Manufacturing Practices compliance",
     },
     {
@@ -50,21 +50,21 @@ export default function Manufacturing() {
       description:
         "Comprehensive testing of all incoming raw materials for quality and purity",
       image:
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "/products/products/manufacturing-lab.webp",
     },
     {
       title: "Production Monitoring",
       description:
         "Real-time monitoring of manufacturing processes with automated controls",
       image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "/products/productmonitaring.webp",
     },
     {
       title: "Quality Control",
       description:
         "Multi-stage quality testing throughout the production cycle",
       image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        "/products/Quality.webp",
     },
     {
       title: "Packaging & Labeling",
@@ -89,24 +89,38 @@ export default function Manufacturing() {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
-          }}
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Manufacturing Excellence
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100">
-              State-of-the-art facilities with world-class quality standards
-            </p>
-          </div>
-        </div>
-      </section>
+  <section className="relative bg-black text-white min-h-[300px] md:min-h-[400px] lg:min-h-[450px] overflow-hidden">
+  {/* Background YouTube Video */}
+  <div className="absolute inset-0 z-0">
+    <iframe
+      className="w-full h-full absolute inset-0"
+      src="https://www.youtube.com/embed/7f7EhjRai_Y?autoplay=1&mute=1&loop=1&playlist=7f7EhjRai_Y&controls=0&showinfo=0&modestbranding=1&rel=0"
+      title="YouTube video background"
+      allow="autoplay; fullscreen"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+
+    {/* Optional Dark Overlay */}
+    <div className="absolute inset-0 bg-black opacity-60"></div>
+  </div>
+
+  {/* Foreground content (optional) */}
+  {/* 
+  <div className="container mx-auto px-4 relative z-10 flex items-center justify-center h-full text-center">
+    <div>
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">Manufacturing Excellence</h1>
+      <p className="text-lg md:text-xl">State-of-the-art facilities with world-class quality standards</p>
+    </div>
+  </div>
+  */}
+</section>
+
+
+
+
+
+
 
       {/* Manufacturing Overview */}
       <section className="py-20">
@@ -149,7 +163,7 @@ export default function Manufacturing() {
               </div>
               <div className="relative">
                 <img
-                  src="/images/injection.jpg"
+                  src="/images/manuf.webp"
                   alt="Manufacturing Facility"
                   className="rounded-lg shadow-lg"
                 />
@@ -159,6 +173,57 @@ export default function Manufacturing() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+{/* Video + Text Section */} 
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      {/* 📝 Text Side */}
+      <div>
+        <h2 className="text-4xl font-bold mb-6 text-gray-800">
+          Modern Medicine Manufacturing & Marketing
+        </h2>
+        <p className="text-lg text-gray-600 mb-4">
+          Our pharmaceutical units operate with highly advanced machinery ensuring formulation, filling, and packaging is done with utmost precision and hygiene.
+        </p>
+        <p className="text-lg text-gray-600">
+          This video gives you a behind-the-scenes view into how we deliver safe, reliable, and certified solutions with modern automation and marketing expertise.
+        </p>
+      </div>
+
+      {/* 📹 YouTube Embed Side */}
+      <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/7f7EhjRai_Y"
+          title="Manufacturing Video"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Quality Features */}
       <section className="py-20 bg-gray-50">
@@ -191,6 +256,27 @@ export default function Manufacturing() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+<div className="rounded-lg overflow-hidden shadow-lg h-[400px]">
+  <iframe
+    className="w-full h-full"
+    src="https://www.youtube.com/embed/7f7EhjRai_Y?autoplay=1&mute=1&playsinline=1&rel=0&showinfo=0"
+    title="Manufacturing Video"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+
+
+
+
+
 
       {/* Manufacturing Process */}
       <section className="py-20">
@@ -226,6 +312,17 @@ export default function Manufacturing() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
 
       {/* R&D Section */}
       <section className="py-20 bg-gray-50">
@@ -281,6 +378,13 @@ export default function Manufacturing() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
 
       {/* Certifications */}
       <section className="py-20">

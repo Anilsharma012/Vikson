@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // ✅ move this here
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -44,18 +45,25 @@ const ProductDetails = () => {
               {product?.name || "No Name"}
             </h1>
             <p className="text-gray-600 mb-4 break-words whitespace-pre-wrap">
-  {product?.description || "No description available."}
-</p>
+              {product?.description || "No description available."}
+            </p>
             <p className="text-gray-800 text-lg">
-  <span className="font-bold">Price:</span> ₹{product?.price || "N/A"}
-</p>
-<p className="text-gray-700 text-sm mt-1">
-  <span className="font-bold">Category:</span> {product?.category || "N/A"}
-</p>
-            {/* <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-              Enquire Now
-            </button> */}
+              <span className="font-bold">Price:</span> ₹{product?.price || "N/A"}
+            </p>
+            <p className="text-gray-700 text-sm mt-1">
+              <span className="font-bold">Category:</span> {product?.category || "N/A"}
+            </p>
           </div>
+        </div>
+
+        {/* 🔙 Back Button */}
+        <div className="mt-8 text-center">
+          <button
+            onClick={() => navigate("/our-products")}
+            className="px-6 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition"
+          >
+            ← Back to Our Products
+          </button>
         </div>
       </section>
       <Footer />

@@ -29,7 +29,7 @@ export default function Partners() {
       title: "Manufacturing Partners",
       description:
         "Collaborative production partnerships with leading pharmaceutical companies",
-      count: "15+",
+      count: "10+",
       color: "text-blue-600",
     },
     {
@@ -61,7 +61,7 @@ export default function Partners() {
     {
       name: "Domestic MKT",
       type: "Manufacturing Partner",
-      since: "2018",
+      // since: "2018",
       description:
         "Leading pharmaceutical manufacturing company specializing in generic medicines",
       specialization: "Oral Solids & Injectables",
@@ -70,7 +70,7 @@ export default function Partners() {
     {
       name: "InternationalMarket",
       type: "Strategic Partner",
-      since: "2020",
+      // since: "2020",
       description:
         "Global pharmaceutical company with focus on complex generics",
       specialization: "API Development",
@@ -79,7 +79,7 @@ export default function Partners() {
     {
       name: "Hospital  ",
       type: "Distribution Partner",
-      since: "2019",
+      // since: "2019",
       description:
         "Healthcare distribution and pharmaceutical services provider",
       specialization: "Supply Chain",
@@ -104,7 +104,7 @@ export default function Partners() {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="relative bg-gradient-to-r from-blue-400 to-blue-600 text-white py-20">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
@@ -180,7 +180,7 @@ export default function Partners() {
                     <div className="flex items-center justify-between mb-2">
                       <Badge variant="outline">{partner.type}</Badge>
                       <span className="text-sm text-gray-500">
-                        Since {partner.since}
+                        {/* Since {partner.since} */}
                       </span>
                     </div>
                     <CardTitle className="text-xl">{partner.name}</CardTitle>
@@ -245,6 +245,23 @@ export default function Partners() {
         </div>
       </section>
 
+
+
+
+
+  {/* Banner Image above Explore Our Company */}
+  {/* <section>
+  <img
+    src="/images/plant.webp"
+    alt="Vikson Pharma Banner"
+    className="w-full h-[400px] object-cover" 
+  />
+  <br></br>
+</section> */}
+
+
+
+
       {/* Partnership Statistics */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-4">
@@ -271,6 +288,9 @@ export default function Partners() {
         </div>
       </section>
 
+
+
+
       {/* Become a Partner CTA */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -296,6 +316,15 @@ export default function Partners() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
 
       <Footer />
     </div>
