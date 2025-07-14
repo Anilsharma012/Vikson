@@ -2,7 +2,7 @@ import "./global.css";
 
 
 import AdminLogin from "./pages/Admin/Login"; 
- import AdminProducts from "./pages/admin/AdminProducts";
+ import AdminProducts from "./pages/Admin/AdminProducts";
 
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
